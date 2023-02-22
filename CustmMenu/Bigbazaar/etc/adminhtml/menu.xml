@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="CustmMenu_Bigbazaar::view" title="Custm Grid" module="CustmMenu_Bigbazaar" sortOrder="50" resource="CustmMenu_Bigbazaar::view"/>
+        <add id="CustmMenu_Bigbazaar::menu" title="Manage Grid" module="CustmMenu_Bigbazaar" sortOrder="20" parent="CustmMenu_Bigbazaar::view" action="bigbazaar/index/index" resource="CustmMenu_Bigbazaar::menu"/>
+    </menu>
+</config>

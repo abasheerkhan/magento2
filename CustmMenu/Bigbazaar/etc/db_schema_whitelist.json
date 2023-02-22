@@ -1,0 +1,18 @@
+{
+    "shopping": {
+        "column": {
+            "cust_id": true,
+            "name": true,
+            "email": true,
+            "description": true,
+            "post_id": true,
+            "post_content": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

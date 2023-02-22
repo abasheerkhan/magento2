@@ -1,0 +1,199 @@
+Directory strucutre of magento
+eav structure
+orm architecture
+
+
+ORM Arcitecture
+ORM stands for Object Relational Mapping. In a nutshell it is converting data into objects and vice versa. 
+Many of the programming languages like PHP, JAVA, .NET supports objects. If we are developing a data driven 
+application by using any of the above stack we use some database to store our application data(Typically a 
+relational database like MySQL). But in most of the cases the data structures of a DBMS and application stack 
+will be different. Now to use the data in our application it should be compatible with application supported 
+data structures. For this purpose Object Relational Mapping is used. PHP has it’s own library called PDO to do 
+this. With the help PDO we can simply establish a connection, query, and fetch results in a way that we can use
+in our application.
+
+Directory structure od Magento
+
+we can see Magento 2 File Structure contains app, bin, setup, phpserver, var, generated, lib, pub, dev.
+
+app
+---
+Here are two main sub-directories in this folder which are design and etc. All the modules that you have customized should be included in the app/code/<CompanyName>/<ModuleName> directory. Besides, all your third-party modules are also being recommended here.
+
+You should store your custom store theme under the app/design/frontend subdirectory and all your admin themes should be stored in the app/design/adminhtml subdirectory.
+
+phpserver
+---------
+
+This has the Router.php file which can be used to implement the PHP built-in server. However, you will not be recommended to work with this file has it can cause numerous potentially big security holes to your site.
+
+bin
+----
+The magento Command line script stored in the bin directory. Thorugh this directory magento command will be activated
+
+setup
+-----
+this directory contains all the files related to the installation purpose
+
+var
+---
+This includes generated classes, sessions, cache, database backups, and cached error reports
+
+pub
+---
+An index.php file will be stored in this directory. You can use this file to run the application in production mode. 
+
+Vendor
+------
+here is also the place where you can install additional modules
+
+
+
+
+
+
+Front Controller: It is the entrance gate for all the request directed at the running applications. 
+It consists of two parts: 
+    - Web handler: parses the url and determines which controller is to be created.
+    - command dispatch: created controller and forwards the request.
+
+--------------------------
+
+Registry pattern: This is a class that is used to share the data between objects in Magento.
+Object is saved in the controller class. It's a concept where data is publicly available on a global scale. Any resouce can use it.
+
+It allows you to place objects and data in the global pool, allowing access to them from anywhere in the code.
+
+-------------------------
+
+Lazy Loading : Lazy Loading is an on-demand loading technique that aims at optimizing website loading speed through deferred content delivery, images in particular.
+
+The main idea behind the lazy loading is to load only necessary resources at the viewport instead of loading all of them at once. So the website images are loaded only at the visible part of the page while the others — when users scroll down the page. 
+
+Since the system only loads the elements customers need instead of loading the whole page content, speed is increased and the web page is delivered faster. That's exactly what makes lazy loading one of the best options to optimize images in Magento 2.
+
+----------------------------
+
+Object Pool Pattern : The object pool pattern is simply a box with objects so that they don't have to be allocated and destroyed over and over again. It is keeps objects ready for use over and over again instead of re-instantiating them and destroying them once finished. It is a great way to save on memory consumption.
+
+
+Abstraction Layer : the data layer, between the data source and the business layer
+
+Service Locater: Encapsulates a service within the extended abstract layer. This allows us to change the service we use without affecting the entire application.
+ 
+---------------------------
+
+
+Module Pattern: 
+Organizes the code in specialized and independent sets, grouping particular functionalities. With this approach it is possible to remove or replace a functionality without negatively affecting the rest of the system.
+
+
+------------------------------
+
+Empty Object: Uses objects that are neutral in behavior. Such objects are designed to replace others that were not found. They should offer the same set of methods as the searched object but they should not perform any operations.
+
+
+Ex: Methods getFirstItem() and getLastItem() from Varien_Data_Collection class are examples of the pattern in Magento.  When the collection is empty, they return an instance of the base class which the collection is referenced to.
+
+
+---------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+In old php concept for creating an object we need to use new keyword
+Object manager is a core class in Magento.
+Magento uses its object manager to take all its object from all the classes and when we need that object, it will provide that object. like in view, model, helper everywhere
+
+Stops code boiling -> repeatition
+automatically instantiating parameters in class constructor.
+
+
+
+
+
+1. Front Controller.
+2. Registry Pattern.
+3. Lazy Loading.
+4. Object Pool Pattern.
+5. Module Pattern.
+6. Empty Objects.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

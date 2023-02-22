@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AK_Helloworld::helloworld" title="Hello World" module="AK_Helloworld" sortOrder="51" resource="AK_Helloworld::helloworld"/>
+        <add id="AK_Helloworld::post" title="Manage Posts" module="AK_Helloworld" sortOrder="10" action="ak_helloworld/post" resource="AK_Helloworld::post" parent="AK_Helloworld::helloworld"/>
+        <add id="AK_Helloworld::hello_configuration" title="Configuration" module="AK_Helloworld" sortOrder="99" parent="AK_Helloworld::helloworld" action="adminhtml/system_config/edit/section/helloworld" resource="AK_Helloworld::helloworld_configuration"/>
+    </menu>
+</config>

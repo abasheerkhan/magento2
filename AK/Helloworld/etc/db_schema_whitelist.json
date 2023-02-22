@@ -1,0 +1,16 @@
+{
+    "asif_table": {
+        "column": {
+            "post_id": true,
+            "name": true,
+            "post_content": true,
+            "email": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

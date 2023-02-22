@@ -1,0 +1,44 @@
+There are three types of user ownership of files
+1.) User:
+    - A user is the owner of the file.
+    - The persom who created the file.
+2.) Groups:
+      -In this, if a group of individuals is working on a project, then in linux we have the      
+      ability to make groups in linux.    
+      - A user- group can contains multiple users.
+      - All users belonging to a group will have the same access permission to the file.
+3.) Others
+      - Everybody else
+      - Neither created the file, nor he belongs to a user-group who could won the file.
+ 
+ -----------------------------------------------------------------------
+ 
+ Permissions of files
+ 1.) Read
+    - Authority to open and read a file.
+    - Read on directory gives you the ability to lists its content
+ 2.) Write
+    - Authority to modify the contents od a file.
+    - Write on directory gives you the authority to add, remove and renames files
+     stored.
+ 3.) Execute
+     - You cannot run a program unless the execute permission is set               
+     
+     Changing File Permission in linux
+     
+     --Absolute(Numeric) Mode
+         - 0 for no permission
+         - 1 for execute
+         - 2 for write
+         - 4 for read
+       Example:
+                (Read+Write+Execute (rwx)) 7 (Read+write(rw-)) 6 (Read(r--)) 4
+       
+       Changing file/directory permission
+       -----------------------------------
+       chmod 764 test
+       chmod = change mod   
+       764 = user group other permission
+       test = file name
+
+

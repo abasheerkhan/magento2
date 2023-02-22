@@ -1,0 +1,16 @@
+<?php
+$record = $block->getEditRecord();
+?>
+
+<form method="POST" action="<?= $this->getUrl('crud/index/save'); ?>" id="id" role="form" name="RegForm" enctype="multipart/form-data" data-mage-init='{"validation":{"rules": {"field-2": {"required":true}}}}'>
+                <h2>Form</h2>
+            
+                
+                <input id="name" name="name" type="text" class="form-control" data-validate='{"required":true}'>
+            
+               
+            
+                    <button type="submit" title="Submit" id="mcf-btn" class="action submit primary" >
+                        <span>Submit</span>
+                    </button>
+</form>
